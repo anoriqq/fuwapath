@@ -1,0 +1,8 @@
+{
+  "name": "fuwapath",
+  "version": "1.0.0",
+  "repository": "git@github.com:anoriqq/fuwapath.git",
+  "author": "anoriqq <shota.yoshikawa@anoriqq.com>",
+  "license": "MIT",
+  "private": true
+}
