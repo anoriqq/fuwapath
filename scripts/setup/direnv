@@ -1,0 +1,16 @@
+#/bin/zsh
+
+DIRENV_VERSION=2.20.0
+
+echo -e '\e[36minstall direnv\e[m'
+
+wget -q -O direnv https://github.com/direnv/direnv/releases/download/v$DIRENV_VERSION/direnv.linux-amd64
+chmod +x direnv
+mv direnv /usr/local/bin/
+
+echo -e '\n# direnv settings\neval "$(direnv hook zsh)"' >> ~/.zshrc
+echo -e 'export PATH=$PATH:./node_modules/.bin' >> ./.envrc
+
+direnv allow
+
+echo -e '\e[36mcomplete!!\e[m'
