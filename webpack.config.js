@@ -11,7 +11,7 @@ module.exports = [
     target: 'web',
     devtool: 'source-map',
     entry: {
-      bandle: path.resolve(__dirname, 'src/client/index.tsx'),
+      bundle: path.resolve(__dirname, 'src/client/index.tsx'),
     },
     output: {
       path: path.resolve(__dirname, 'dist/client'),
@@ -47,7 +47,7 @@ module.exports = [
     devtool: 'source-map',
     externals: [nodeExternals()],
     entry: {
-      bandle: path.resolve(__dirname, 'src/server/index.ts'),
+      bundle: path.resolve(__dirname, 'src/server/index.ts'),
     },
     output: {
       path: path.resolve(__dirname, 'dist/server'),
