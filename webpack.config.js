@@ -45,6 +45,10 @@ module.exports = [
   /* Server side */
   {
     target: 'node',
+    node: {
+      __dirname: false,
+      __filename: false,
+    },
     devtool: 'source-map',
     externals: [nodeExternals()],
     entry: {
