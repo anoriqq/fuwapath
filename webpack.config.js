@@ -22,7 +22,7 @@ module.exports = [
     module: {
       rules: [
         {
-          test: /\.ts$/,
+          test: /\.(ts|tsx)$/,
           enforce: 'pre',
           exclude: /(node_modules|dist)/,
           loader: 'eslint-loader',
@@ -31,7 +31,8 @@ module.exports = [
           },
         },
         {
-          test: /(\.ts$|\.tsx$)/,
+          test: /\.(ts|tsx)$/,
+          exclude: /(node_modules|dist)/,
           loader: 'ts-loader',
         },
       ],
@@ -78,6 +79,7 @@ module.exports = [
         },
         {
           test: /\.ts$/,
+          exclude: /(node_modules|dist)/,
           loader: 'ts-loader',
         },
       ],
