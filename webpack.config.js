@@ -2,12 +2,9 @@ const path = require('path');
 // eslint-disable-next-line node/no-unpublished-require
 const nodeExternals = require('webpack-node-externals');
 
-const mode = process.env.WEBPACK_BUILD_MODE || 'development';
-
 module.exports = [
   /* Client side */
   {
-    mode,
     target: 'web',
     devtool: 'source-map',
     output: {
@@ -47,7 +44,6 @@ module.exports = [
 
   /* Server side */
   {
-    mode,
     target: 'node',
     devtool: 'source-map',
     externals: [nodeExternals()],
