@@ -10,12 +10,17 @@ module.exports = [
     mode,
     target: 'web',
     devtool: 'source-map',
-    entry: {
-      bundle: path.resolve(__dirname, 'src/client/index.tsx'),
-    },
     output: {
-      path: path.resolve(__dirname, 'dist/client'),
-      filename: '[name].js',
+      path: path.resolve(__dirname, 'public'),
+      filename: '[name]',
+    },
+    entry: {
+      'js/main.bundle.js': path.resolve(__dirname, 'src/client/index.tsx'),
+    },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+      },
     },
     module: {
       rules: [
@@ -47,11 +52,16 @@ module.exports = [
     devtool: 'source-map',
     externals: [nodeExternals()],
     entry: {
-      bundle: path.resolve(__dirname, 'src/server/index.ts'),
+      'main.bundle.js': path.resolve(__dirname, 'src/server/index.ts'),
     },
     output: {
-      path: path.resolve(__dirname, 'dist/server'),
-      filename: '[name].js',
+      path: path.resolve(__dirname, './dist'),
+      filename: '[name]',
+    },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+      },
     },
     module: {
       rules: [
