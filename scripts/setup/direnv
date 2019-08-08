@@ -9,7 +9,7 @@ chmod +x direnv
 mv direnv /usr/local/bin/
 
 echo -e '\n# direnv settings\neval "$(direnv hook zsh)"' >> ~/.zshrc
-echo -e 'export PATH=$PATH:./node_modules/.bin' >> ./.envrc
+echo -e 'export PATH=$PATH:./node_modules/.bin:./scripts/.bin' >> ./.envrc
 
 direnv allow
 

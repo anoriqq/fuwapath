@@ -43,5 +43,8 @@ module.exports = {
     },
   },
   rules: {
+    "node/no-unsupported-features/es-syntax": 0,
+    "no-process-exit": 0,
+    "spaced-comment": [2,"always",{"line": {"markers": ["/"]}}],
   },
 };
