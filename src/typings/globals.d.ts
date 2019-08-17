@@ -3,7 +3,7 @@ type Config = {
 };
 
 // eslint-disable-next-line no-unused-vars
-declare module NodeJS {
+declare namespace NodeJS {
   interface Global {
     config: Config;
   }
