@@ -4,12 +4,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: [
-    'plugin:prettier/recommended',
-    'plugin:react/recommended',
-    'plugin:node/recommended',
-    'google',
-  ],
+  extends: ['plugin:prettier/recommended', 'plugin:react/recommended', 'plugin:node/recommended', 'google'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -23,28 +18,20 @@ module.exports = {
     sourceType: 'module',
     tsconfigRootDir: '.',
   },
-  plugins: [
-    'react',
-    'prettier',
-    'node',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', 'prettier', 'node', '@typescript-eslint'],
   settings: {
     node: {
-      tryExtensions: [
-        '.ts',
-        '.js',
-        '.json',
-        '.node',
-      ]
+      tryExtensions: ['.ts', '.js', '.json', '.node'],
     },
     react: {
       version: 'detect',
     },
   },
   rules: {
-    "node/no-unsupported-features/es-syntax": 0,
-    "no-process-exit": 0,
-    "spaced-comment": [2,"always",{"line": {"markers": ["/"]}}],
+    'node/no-unsupported-features/es-syntax': 0,
+    'no-process-exit': 0,
+    'spaced-comment': [2, 'always', {line: {markers: ['/']}}],
+    indent: [2, 2, {MemberExpression: 1}],
+    'arrow-parens': [2, 'as-needed'],
   },
 };
