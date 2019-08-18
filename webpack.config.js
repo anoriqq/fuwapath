@@ -53,7 +53,7 @@ module.exports = [
     devtool: 'source-map',
     externals: [nodeExternals()],
     entry: {
-      'main.bundle.js': path.resolve(__dirname, 'src/server/index.ts'),
+      'main.bundle.js': path.resolve(__dirname, 'src/server/runWorker.ts'),
     },
     output: {
       path: path.resolve(__dirname, './dist'),
